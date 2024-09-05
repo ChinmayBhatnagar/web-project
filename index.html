@@ -18,21 +18,22 @@
                     <a href="#home">
                         <img src="images/Rajasthan_Police_Logo.png" alt="Telecommunication Logo" class="logo-image">
                         <!-- Path to your logo image -->
-                        <!-- <span>Telecommunication</span> -->
                     </a>
                 </div>
 
                 <div class="menu-icon" onclick="toggleMenu()">
                     <i class="fas fa-bars"></i>
                 </div>
+            
                 <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#Branches">Branches</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#training">Training</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#home" class="content" data-english="Home" data-hindi="होम">Home</a></li>
+                    <li><a href="#about" class="content" data-english="About Us" data-hindi="हमारे बारे में">About Us</a></li>
+                    <li><a href="#services" class="content" data-english="Services" data-hindi="सेवाएँ">Services</a></li>
+                    <li><a href="#Branches" class="content" data-english="Branches" data-hindi="शाखाएँ">Branches</a></li>
+                    <li><a href="#projects" class="content" data-english="Projects" data-hindi="परियोजनाएँ">Projects</a></li>
+                    <li><a href="#training" class="content" data-english="Training" data-hindi="प्रशिक्षण">Training</a></li>
+                    <li><a href="#contact" class="content" data-english="Contact Us" data-hindi="संपर्क करें">Contact Us</a></li>
+                    <li><button id="languageToggle" class="language-toggle">हिंदी</button></li>
                 </ul>
             </div>
         </nav>
@@ -55,100 +56,115 @@
 
         <!-- Hero Section -->
         <section class="hero">
-            <h1>Welcome to Rajasthan Police Telecommunication Branch</h1>
-            <p>Ensuring seamless communication across Rajasthan.</p>
-            <a href="#about" class="btn">Learn More</a>
+            <h1 data-english="Welcome to Rajasthan Police Telecommunication Branch" data-hindi="राजस्थान पुलिस दूरसंचार शाखा में आपका स्वागत है">Welcome to Rajasthan Police Telecommunication Branch</h1>
+            <p data-english="Ensuring seamless communication across Rajasthan." data-hindi="राजस्थान में सहज संचार सुनिश्चित करना।">Ensuring seamless communication across Rajasthan.</p>
+            <a href="#about" class="btn" data-english="Learn More" data-hindi="अधिक जानें">Learn More</a>
         </section>
-
+        
 
         <!-- About Us Section -->
         <section id="about" class="about-section">
             <div class="container">
-                <h2>About Us</h2>
-                <p>The Rajasthan Police Telecommunication Branch is dedicated to enhancing communication systems across
-                    the police force in Rajasthan. Our mission is to ensure that our communication infrastructure is
-                    robust, secure, and always up-to-date to meet the dynamic needs of law enforcement.</p>
-
+                <h2 data-english="About Us" data-hindi="हमारे बारे में">About Us</h2>
+                <p data-english="The Rajasthan Police Telecommunication Branch is dedicated to enhancing communication systems across the police force in Rajasthan. Our mission is to ensure that our communication infrastructure is robust, secure, and always up-to-date to meet the dynamic needs of law enforcement."
+                   data-hindi="राजस्थान पुलिस दूरसंचार शाखा राजस्थान में पुलिस बल के संचार प्रणालियों को बेहतर बनाने के लिए समर्पित है। हमारा मिशन यह सुनिश्चित करना है कि हमारी संचार अवसंरचना मजबूत, सुरक्षित और हमेशा अद्यतित रहे ताकि कानून प्रवर्तन की गतिशील जरूरतों को पूरा किया जा सके।">
+                   The Rajasthan Police Telecommunication Branch is dedicated to enhancing communication systems across the police force in Rajasthan. Our mission is to ensure that our communication infrastructure is robust, secure, and always up-to-date to meet the dynamic needs of law enforcement.
+                </p>
+        
                 <!-- Mission Statement -->
                 <div class="mission-statement">
-                    <h3>Our Mission</h3>
-                    <p>To provide efficient, reliable, and secure communication solutions that empower the Rajasthan
-                        Police to perform their duties effectively and with the highest level of safety.</p>
+                    <h3 data-english="Our Mission" data-hindi="हमारा मिशन">Our Mission</h3>
+                    <p data-english="To provide efficient, reliable, and secure communication solutions that empower the Rajasthan Police to perform their duties effectively and with the highest level of safety."
+                       data-hindi="राजस्थान पुलिस को अपनी जिम्मेदारियों को प्रभावी ढंग से और सबसे उच्च स्तर की सुरक्षा के साथ निभाने के लिए सक्षम बनाने वाले कुशल, विश्वसनीय और सुरक्षित संचार समाधान प्रदान करना।">
+                       To provide efficient, reliable, and secure communication solutions that empower the Rajasthan Police to perform their duties effectively and with the highest level of safety.
+                    </p>
                 </div>
-
+        
                 <!-- Key Objectives -->
                 <div class="objectives">
                     <div class="objective">
                         <img src="images/comm.png" alt="Objective 1">
-                        <h4>Reliable Communication</h4>
-                        <p>Ensuring uninterrupted communication channels for real-time operations and emergency
-                            responses.</p>
+                        <h4 data-english="Reliable Communication" data-hindi="विश्वसनीय संचार">Reliable Communication</h4>
+                        <p data-english="Ensuring uninterrupted communication channels for real-time operations and emergency responses."
+                           data-hindi="वास्तविक समय संचालन और आपातकालीन प्रतिक्रियाओं के लिए अवरोधन-मुक्त संचार चैनलों को सुनिश्चित करना।">
+                           Ensuring uninterrupted communication channels for real-time operations and emergency responses.
+                        </p>
                     </div>
                     <div class="objective">
                         <img src="images/tech.png" alt="Objective 2">
-                        <h4>Advanced Technology</h4>
-                        <p>Implementing cutting-edge technology to stay ahead in communication systems and
-                            infrastructure.</p>
+                        <h4 data-english="Advanced Technology" data-hindi="उन्नत तकनीक">Advanced Technology</h4>
+                        <p data-english="Implementing cutting-edge technology to stay ahead in communication systems and infrastructure."
+                           data-hindi="संचार प्रणालियों और अवसंरचना में आगे रहने के लिए अत्याधुनिक तकनीक को लागू करना।">
+                           Implementing cutting-edge technology to stay ahead in communication systems and infrastructure.
+                        </p>
                     </div>
                     <div class="objective">
                         <img src="images/dev.png" alt="Objective 3">
-                        <h4>Training and Development</h4>
-                        <p>Providing comprehensive training to ensure all personnel are proficient with the latest
-                            communication tools and techniques.</p>
+                        <h4 data-english="Training and Development" data-hindi="प्रशिक्षण और विकास">Training and Development</h4>
+                        <p data-english="Providing comprehensive training to ensure all personnel are proficient with the latest communication tools and techniques."
+                           data-hindi="सुनिश्चित करने के लिए सभी कर्मियों को नवीनतम संचार उपकरणों और तकनीकों के साथ प्रवीण बनाना।">
+                           Providing comprehensive training to ensure all personnel are proficient with the latest communication tools and techniques.
+                        </p>
                     </div>
                 </div>
-
+        
                 <!-- Senior Officers -->
                 <div class="officer-cards">
                     <div class="officer-card">
                         <img src="images/police.jpg" alt="Officer 1">
-                        <h3>John Doe</h3>
-                        <p>Director of Telecommunications</p>
-                        <p>John Doe has over 20 years of experience in communication systems and leads our efforts in
-                            technological advancements and strategic planning.</p>
+                        <h3 data-english="John Doe" data-hindi="जॉन डो">John Doe</h3>
+                        <p data-english="Director of Telecommunications" data-hindi="दूरसंचार निदेशक">Director of Telecommunications</p>
+                        <p data-english="John Doe has over 20 years of experience in communication systems and leads our efforts in technological advancements and strategic planning."
+                           data-hindi="जॉन डो के पास संचार प्रणालियों में 20 वर्षों से अधिक का अनुभव है और वह हमारे तकनीकी उन्नति और रणनीतिक योजना में प्रयासों का नेतृत्व करते हैं।">
+                           John Doe has over 20 years of experience in communication systems and leads our efforts in technological advancements and strategic planning.
+                        </p>
                     </div>
                     <div class="officer-card">
                         <img src="images/police.jpg" alt="Officer 2">
-                        <h3>Jane Smith</h3>
-                        <p>Head of Technical Support</p>
-                        <p>Jane Smith manages our technical support team, ensuring that all issues are resolved promptly
-                            and efficiently to maintain seamless operations.</p>
+                        <h3 data-english="Jane Smith" data-hindi="जेन स्मिथ">Jane Smith</h3>
+                        <p data-english="Head of Technical Support" data-hindi="तकनीकी समर्थन प्रमुख">Head of Technical Support</p>
+                        <p data-english="Jane Smith manages our technical support team, ensuring that all issues are resolved promptly and efficiently to maintain seamless operations."
+                           data-hindi="जेन स्मिथ हमारे तकनीकी समर्थन टीम का प्रबंधन करती हैं, यह सुनिश्चित करते हुए कि सभी समस्याओं का त्वरित और कुशल समाधान हो ताकि निर्बाध संचालन बनाए रखा जा सके।">
+                           Jane Smith manages our technical support team, ensuring that all issues are resolved promptly and efficiently to maintain seamless operations.
+                        </p>
                     </div>
                     <div class="officer-card">
                         <img src="images/police.jpg" alt="Officer 3">
-                        <h3>Michael Johnson</h3>
-                        <p>Training Coordinator</p>
-                        <p>Michael Johnson oversees our training programs, ensuring that our personnel are equipped with
-                            the skills and knowledge to handle advanced communication tools.</p>
+                        <h3 data-english="Michael Johnson" data-hindi="माइकल जॉनसन">Michael Johnson</h3>
+                        <p data-english="Training Coordinator" data-hindi="प्रशिक्षण समन्वयक">Training Coordinator</p>
+                        <p data-english="Michael Johnson oversees our training programs, ensuring that our personnel are equipped with the skills and knowledge to handle advanced communication tools."
+                           data-hindi="माइकल जॉनसन हमारे प्रशिक्षण कार्यक्रमों की निगरानी करते हैं, यह सुनिश्चित करते हुए कि हमारे कर्मियों को उन्नत संचार उपकरणों को संभालने के लिए आवश्यक कौशल और ज्ञान प्राप्त हो।">
+                           Michael Johnson oversees our training programs, ensuring that our personnel are equipped with the skills and knowledge to handle advanced communication tools.
+                        </p>
                     </div>
                 </div>
             </div>
-
+        
             <!-- PDF Icons -->
             <div class="pdf-icons">
                 <a href="pdf/ChinmayCV.pdf" target="_blank" class="pdf-item">
                     <img src="images/pdf.png" alt="PDF 1">
-                    <span>PDF 1 Description</span>
+                    <span data-english="PDF 1 Description" data-hindi="PDF 1 विवरण">PDF 1 Description</span>
                 </a>
                 <a href="pdf/ChinmayCV.pdf" target="_blank" class="pdf-item">
                     <img src="images/pdf.png" alt="PDF 2">
-                    <span>PDF 2 Description</span>
+                    <span data-english="PDF 2 Description" data-hindi="PDF 2 विवरण">PDF 2 Description</span>
                 </a>
                 <a href="pdf/ChinmayCV.pdf" target="_blank" class="pdf-item">
                     <img src="images/pdf.png" alt="PDF 3">
-                    <span>PDF 3 Description</span>
+                    <span data-english="PDF 3 Description" data-hindi="PDF 3 विवरण">PDF 3 Description</span>
                 </a>
                 <a href="pdf/ChinmayCV.pdf" target="_blank" class="pdf-item">
                     <img src="images/pdf.png" alt="PDF 4">
-                    <span>PDF 4 Description</span>
+                    <span data-english="PDF 4 Description" data-hindi="PDF 4 विवरण">PDF 4 Description</span>
                 </a>
                 <a href="pdf/ChinmayCV.pdf" target="_blank" class="pdf-item">
                     <img src="images/pdf.png" alt="PDF 5">
-                    <span>PDF 5 Description</span>
+                    <span data-english="PDF 5 Description" data-hindi="PDF 5 विवरण">PDF 5 Description</span>
                 </a>
             </div>
-
         </section>
+        
 
         <!-- Officer Modals -->
         <div id="modal1" class="modal">
@@ -175,87 +191,89 @@
 
         <!-- Services Section -->
         <section id="services">
-            <h2>Our Services</h2>
-            <p>Our Telecommunication Branch provides a range of specialized services designed to ensure the highest
-                level of communication efficiency across the state. Here are some of the key services we offer:</p>
+            <h2 data-english="Our Services" data-hindi="हमारी सेवाएँ">Our Services</h2>
+            <p data-english="Our Telecommunication Branch provides a range of specialized services designed to ensure the highest level of communication efficiency across the state. Here are some of the key services we offer:" data-hindi="हमारी दूरसंचार शाखा उच्चतम स्तर की संचार दक्षता सुनिश्चित करने के लिए डिज़ाइन की गई विशिष्ट सेवाओं की एक श्रृंखला प्रदान करती है। यहां कुछ प्रमुख सेवाएँ दी गई हैं:">
+                Our Telecommunication Branch provides a range of specialized services designed to ensure the highest level of communication efficiency across the state. Here are some of the key services we offer:
+            </p>
             <div class="service-cards">
                 <div class="service-card">
                     <div class="service-icon">
                         <img src="images/communication-svgrepo-com.svg" alt="Communication Systems">
                     </div>
-                    <h3>Communication Systems</h3>
-                    <p>We design, implement, and maintain state-of-the-art communication systems to facilitate seamless
-                        interaction among police units and enhance operational efficiency.</p>
+                    <h3 data-english="Communication Systems" data-hindi="संचार प्रणाली">Communication Systems</h3>
+                    <p data-english="We design, implement, and maintain state-of-the-art communication systems to facilitate seamless interaction among police units and enhance operational efficiency." data-hindi="हम अत्याधुनिक संचार प्रणालियाँ डिज़ाइन, लागू और बनाए रखते हैं ताकि पुलिस इकाइयों के बीच सहज संपर्क को सक्षम किया जा सके और परिचालन दक्षता को बढ़ाया जा सके।">
+                        We design, implement, and maintain state-of-the-art communication systems to facilitate seamless interaction among police units and enhance operational efficiency.
+                    </p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <img src="images/technical-support-svgrepo-com.svg" alt="Technical Support">
                     </div>
-                    <h3>Technical Support</h3>
-                    <p>Our dedicated technical support team is available 24/7 to address any issues and provide
-                        solutions to ensure uninterrupted communication services for all police units.</p>
+                    <h3 data-english="Technical Support" data-hindi="तकनीकी समर्थन">Technical Support</h3>
+                    <p data-english="Our dedicated technical support team is available 24/7 to address any issues and provide solutions to ensure uninterrupted communication services for all police units." data-hindi="हमारी समर्पित तकनीकी समर्थन टीम 24/7 उपलब्ध है ताकि किसी भी मुद्दे को संबोधित किया जा सके और सभी पुलिस इकाइयों के लिए निर्बाध संचार सेवाओं को सुनिश्चित किया जा सके।">
+                        Our dedicated technical support team is available 24/7 to address any issues and provide solutions to ensure uninterrupted communication services for all police units.
+                    </p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <img src="images/network-backup-svgrepo-com.svg" alt="Network Upgrades">
                     </div>
-                    <h3>Network Upgrades</h3>
-                    <p>We regularly upgrade our network infrastructure to incorporate the latest technology and improve
-                        connectivity, ensuring that our communication systems remain cutting-edge and reliable.</p>
+                    <h3 data-english="Network Upgrades" data-hindi="नेटवर्क उन्नयन">Network Upgrades</h3>
+                    <p data-english="We regularly upgrade our network infrastructure to incorporate the latest technology and improve connectivity, ensuring that our communication systems remain cutting-edge and reliable." data-hindi="हम नियमित रूप से अपनी नेटवर्क अवसंरचना को नवीनतम प्रौद्योगिकी को शामिल करने और कनेक्टिविटी में सुधार के लिए अपग्रेड करते हैं, यह सुनिश्चित करते हुए कि हमारे संचार सिस्टम आधुनिक और विश्वसनीय बने रहें।">
+                        We regularly upgrade our network infrastructure to incorporate the latest technology and improve connectivity, ensuring that our communication systems remain cutting-edge and reliable.
+                    </p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <img src="images/training-achievement-medal-svgrepo-com.svg" alt="Training Programs">
                     </div>
-                    <h3>Training Programs</h3>
-                    <p>We offer comprehensive training programs for police personnel to ensure they are proficient in
-                        using our communication systems and technology effectively.</p>
+                    <h3 data-english="Training Programs" data-hindi="प्रशिक्षण कार्यक्रम">Training Programs</h3>
+                    <p data-english="We offer comprehensive training programs for police personnel to ensure they are proficient in using our communication systems and technology effectively." data-hindi="हम पुलिस कर्मियों के लिए व्यापक प्रशिक्षण कार्यक्रम प्रदान करते हैं ताकि यह सुनिश्चित किया जा सके कि वे हमारे संचार प्रणालियों और प्रौद्योगिकी का प्रभावी ढंग से उपयोग कर सकें।">
+                        We offer comprehensive training programs for police personnel to ensure they are proficient in using our communication systems and technology effectively.
+                    </p>
                 </div>
             </div>
         </section>
+        
 
         <!-- Branches -->
         <section id="Branches">
-            <h2 style="text-align: center;">Branches in Telecommunication</h2>
+            <h2 data-english="Branches in Telecommunication" data-hindi="दूरसंचार शाखाएँ" style="text-align: center;">Branches in Telecommunication</h2>
             <div class="tree">
                 <ul>
                     <li>
-                        <div class="branch-title">Telecommunication</div>
+                        <div class="branch-title" data-english="Telecommunication" data-hindi="दूरसंचार">Telecommunication</div>
                         <ul>
                             <li>
-                                <div class="sub-branch">
+                                <div class="sub-branch" data-english="Social Media" data-hindi="सोशल मीडिया">
                                     <i class="fas fa-share-alt"></i> Social Media
                                 </div>
-                                <div class="description">
-                                    Focuses on monitoring and managing communication over social media platforms to
-                                    ensure secure and efficient dissemination of information.
+                                <div class="description" data-english="Focuses on monitoring and managing communication over social media platforms to ensure secure and efficient dissemination of information." data-hindi="सोशल मीडिया प्लेटफार्मों पर संचार की निगरानी और प्रबंधन पर ध्यान केंद्रित करता है ताकि सुरक्षित और कुशल जानकारी का प्रसार सुनिश्चित हो सके.">
+                                    Focuses on monitoring and managing communication over social media platforms to ensure secure and efficient dissemination of information.
                                 </div>
                             </li>
                             <li>
-                                <div class="sub-branch">
+                                <div class="sub-branch" data-english="Drones" data-hindi="ड्रोन">
                                     <i class="fas fa-drone"></i> Drones
                                 </div>
-                                <div class="description">
-                                    Specializes in the use of drone technology for surveillance, data collection, and
-                                    communication in remote or hard-to-reach areas.
+                                <div class="description" data-english="Specializes in the use of drone technology for surveillance, data collection, and communication in remote or hard-to-reach areas." data-hindi="निगरानी, डेटा संग्रहण, और दूरस्थ या कठिन-से-पहुंच क्षेत्रों में संचार के लिए ड्रोन प्रौद्योगिकी के उपयोग में विशेषज्ञता।">
+                                    Specializes in the use of drone technology for surveillance, data collection, and communication in remote or hard-to-reach areas.
                                 </div>
                             </li>
                             <li>
-                                <div class="sub-branch">
+                                <div class="sub-branch" data-english="Cybersecurity" data-hindi="साइबर सुरक्षा">
                                     <i class="fas fa-shield-alt"></i> Cybersecurity
                                 </div>
-                                <div class="description">
-                                    Ensures the protection of communication networks from cyber threats, including
-                                    hacking, malware, and unauthorized access.
+                                <div class="description" data-english="Ensures the protection of communication networks from cyber threats, including hacking, malware, and unauthorized access." data-hindi="संचार नेटवर्क को साइबर खतरों से सुरक्षा सुनिश्चित करता है, जिसमें हैकिंग, मैलवेयर, और अनधिकृत पहुँच शामिल हैं।">
+                                    Ensures the protection of communication networks from cyber threats, including hacking, malware, and unauthorized access.
                                 </div>
                             </li>
                             <li>
-                                <div class="sub-branch">
+                                <div class="sub-branch" data-english="Telecommunication Systems" data-hindi="दूरसंचार प्रणालियाँ">
                                     <i class="fas fa-broadcast-tower"></i> Telecommunication Systems
                                 </div>
-                                <div class="description">
-                                    Manages and maintains communication infrastructure, including radio, satellite, and
-                                    wireless networks, to ensure reliable communication.
+                                <div class="description" data-english="Manages and maintains communication infrastructure, including radio, satellite, and wireless networks, to ensure reliable communication." data-hindi="संचार अवसंरचना का प्रबंधन और रखरखाव करता है, जिसमें रेडियो, उपग्रह, और वायरलेस नेटवर्क शामिल हैं, ताकि विश्वसनीय संचार सुनिश्चित हो सके।">
+                                    Manages and maintains communication infrastructure, including radio, satellite, and wireless networks, to ensure reliable communication.
                                 </div>
                             </li>
                         </ul>
@@ -263,166 +281,171 @@
                 </ul>
             </div>
         </section>
+        
 
 
         <!-- Projects Section -->
         <section id="projects">
-            <h2>Projects</h2>
+            <h2 data-english="Projects" data-hindi="प्रोजेक्ट्स">Projects</h2>
             <div class="projects-container">
                 <!-- Completed Projects -->
                 <div class="projects-section">
-                    <h3>Completed Projects</h3>
+                    <h3 data-english="Completed Projects" data-hindi="पूर्ण परियोजनाएँ">Completed Projects</h3>
                     <div class="project-card">
                         <img src="images/project.jpg" alt="Completed Project 1">
                         <div class="project-info">
-                            <h4>Project Name 1</h4>
-                            <p>Description of the completed project 1.</p>
+                            <h4 data-english="Project Name 1" data-hindi="परियोजना नाम 1">Project Name 1</h4>
+                            <p data-english="Description of the completed project 1." data-hindi="पूर्ण परियोजना 1 का विवरण.">Description of the completed project 1.</p>
                         </div>
                     </div>
                     <div class="project-card">
                         <img src="images/project.jpg" alt="Completed Project 2">
                         <div class="project-info">
-                            <h4>Project Name 2</h4>
-                            <p>Description of the completed project 2.</p>
+                            <h4 data-english="Project Name 2" data-hindi="परियोजना नाम 2">Project Name 2</h4>
+                            <p data-english="Description of the completed project 2." data-hindi="पूर्ण परियोजना 2 का विवरण.">Description of the completed project 2.</p>
                         </div>
                     </div>
                     <!-- Add more completed project cards as needed -->
                 </div>
-
+        
                 <!-- Upcoming Projects -->
                 <div class="projects-section">
-                    <h3>Upcoming Projects</h3>
+                    <h3 data-english="Upcoming Projects" data-hindi="आगामी परियोजनाएँ">Upcoming Projects</h3>
                     <div class="project-card">
                         <img src="images/project.jpg" alt="Upcoming Project 1">
                         <div class="project-info">
-                            <h4>Project Name 1</h4>
-                            <p>Description of the upcoming project 1.</p>
+                            <h4 data-english="Project Name 1" data-hindi="परियोजना नाम 1">Project Name 1</h4>
+                            <p data-english="Description of the upcoming project 1." data-hindi="आगामी परियोजना 1 का विवरण.">Description of the upcoming project 1.</p>
                         </div>
                     </div>
                     <div class="project-card">
                         <img src="images/project.jpg" alt="Upcoming Project 2">
                         <div class="project-info">
-                            <h4>Project Name 2</h4>
-                            <p>Description of the upcoming project 2.</p>
+                            <h4 data-english="Project Name 2" data-hindi="परियोजना नाम 2">Project Name 2</h4>
+                            <p data-english="Description of the upcoming project 2." data-hindi="आगामी परियोजना 2 का विवरण.">Description of the upcoming project 2.</p>
                         </div>
                     </div>
                     <!-- Add more upcoming project cards as needed -->
                 </div>
             </div>
         </section>
+        
 
 
-        <!-- Training Section -->
-        <section id="training">
-            <h2>Training Programs</h2>
-            <p>At the Rajasthan Police Telecommunication Branch, we are dedicated to nurturing talent and promoting
-                advanced knowledge through a diverse range of training programs. Explore our comprehensive approach to
-                professional development:</p>
+      <!-- Training Section -->
+<section id="training">
+    <h2 data-english="Training Programs" data-hindi="प्रशिक्षण कार्यक्रम">Training Programs</h2>
+    <p data-english="At the Rajasthan Police Telecommunication Branch, we are dedicated to nurturing talent and promoting advanced knowledge through a diverse range of training programs. Explore our comprehensive approach to professional development:" data-hindi="राजस्थान पुलिस टेलीकम्युनिकेशन शाखा में, हम प्रतिभा को संवारने और उन्नत ज्ञान को बढ़ावा देने के प्रति प्रतिबद्ध हैं। विभिन्न प्रकार के प्रशिक्षण कार्यक्रमों के माध्यम से हमारी व्यापक दृष्टिकोण का पता लगाएं:">At the Rajasthan Police Telecommunication Branch, we are dedicated to nurturing talent and promoting advanced knowledge through a diverse range of training programs. Explore our comprehensive approach to professional development:</p>
 
-            <div class="training-container">
-                <!-- Internships -->
-                <div class="training-item">
-                    <img src="images/Internship.png" alt="Internships" class="training-img">
-                    <div class="training-content">
-                        <h3>Internships</h3>
-                        <p>Our internship program offers hands-on experience with state-of-the-art telecommunication
-                            technologies. Interns collaborate with seasoned professionals and contribute to impactful
-                            projects, gaining practical skills and industry insights.</p>
-                    </div>
-                </div>
-
-                <!-- Training Programs -->
-                <div class="training-item">
-                    <img src="images/Training.png" alt="Training Programs" class="training-img">
-                    <div class="training-content">
-                        <h3>Training Programs</h3>
-                        <p>We offer targeted training programs designed to enhance the skills of our personnel and
-                            partners. Covering both foundational and advanced topics, our programs ensure that
-                            participants stay at the forefront of technological advancements and industry standards.</p>
-                    </div>
-                </div>
-
-                <!-- Workshops -->
-                <div class="training-item">
-                    <img src="images/Workshops.png" alt="Workshops" class="training-img">
-                    <div class="training-content">
-                        <h3>Workshops</h3>
-                        <p>Our workshops feature interactive sessions led by industry experts. These events provide
-                            practical experience with the latest technologies and methodologies, helping participants
-                            solve real-world challenges and advance their technical skills.</p>
-                    </div>
-                </div>
-
-                <!-- Technical Meetups -->
-                <div class="training-item">
-                    <img src="images/kindpng_468429.png" alt="Technical Meetups" class="training-img">
-                    <div class="training-content">
-                        <h3>Technical Meetups</h3>
-                        <p>We host technical meetups that foster collaboration and knowledge sharing among professionals
-                            and enthusiasts. These events offer a platform to discuss emerging technologies, network
-                            with peers, and stay updated on industry trends.</p>
-                    </div>
-                </div>
-
-                <!-- Functions with Tech Giants -->
-                <div class="training-item">
-                    <img src="images/kindpng_2799219.png" alt="Functions with Tech Giants" class="training-img">
-                    <div class="training-content">
-                        <h3>Functions with Tech Giants</h3>
-                        <p>Our high-profile functions feature keynote speeches and panel discussions with leaders from
-                            major technology companies. These events provide valuable insights into cutting-edge
-                            technologies and strategic industry developments.</p>
-                    </div>
-                </div>
+    <div class="training-container">
+        <!-- Internships -->
+        <div class="training-item">
+            <img src="images/Internship.png" alt="Internships" class="training-img">
+            <div class="training-content">
+                <h3 data-english="Internships" data-hindi="इंटर्नशिप">Internships</h3>
+                <p data-english="Our internship program offers hands-on experience with state-of-the-art telecommunication technologies. Interns collaborate with seasoned professionals and contribute to impactful projects, gaining practical skills and industry insights." data-hindi="हमारा इंटर्नशिप कार्यक्रम अत्याधुनिक टेलीकम्युनिकेशन प्रौद्योगिकियों के साथ व्यावहारिक अनुभव प्रदान करता है। इंटर्न अनुभवी पेशेवरों के साथ सहयोग करते हैं और प्रभावशाली परियोजनाओं में योगदान करते हैं, व्यावहारिक कौशल और उद्योग की जानकारी प्राप्त करते हैं।">Our internship program offers hands-on experience with state-of-the-art telecommunication technologies. Interns collaborate with seasoned professionals and contribute to impactful projects, gaining practical skills and industry insights.</p>
             </div>
-        </section>
+        </div>
+
+        <!-- Training Programs -->
+        <div class="training-item">
+            <img src="images/Training.png" alt="Training Programs" class="training-img">
+            <div class="training-content">
+                <h3 data-english="Training Programs" data-hindi="प्रशिक्षण कार्यक्रम">Training Programs</h3>
+                <p data-english="We offer targeted training programs designed to enhance the skills of our personnel and partners. Covering both foundational and advanced topics, our programs ensure that participants stay at the forefront of technological advancements and industry standards." data-hindi="हम लक्षित प्रशिक्षण कार्यक्रम प्रदान करते हैं जो हमारे कर्मियों और साझेदारों के कौशल को बढ़ाने के लिए डिज़ाइन किए गए हैं। बुनियादी और उन्नत विषयों को कवर करते हुए, हमारे कार्यक्रम यह सुनिश्चित करते हैं कि प्रतिभागी तकनीकी प्रगति और उद्योग मानकों के अग्रभाग में बने रहें।">We offer targeted training programs designed to enhance the skills of our personnel and partners. Covering both foundational and advanced topics, our programs ensure that participants stay at the forefront of technological advancements and industry standards.</p>
+            </div>
+        </div>
+
+        <!-- Workshops -->
+        <div class="training-item">
+            <img src="images/Workshops.png" alt="Workshops" class="training-img">
+            <div class="training-content">
+                <h3 data-english="Workshops" data-hindi="कार्यशालाएँ">Workshops</h3>
+                <p data-english="Our workshops feature interactive sessions led by industry experts. These events provide practical experience with the latest technologies and methodologies, helping participants solve real-world challenges and advance their technical skills." data-hindi="हमारी कार्यशालाएँ उद्योग विशेषज्ञों द्वारा संचालित इंटरएक्टिव सत्र पेश करती हैं। ये कार्यक्रम नवीनतम प्रौद्योगिकियों और पद्धतियों के साथ व्यावहारिक अनुभव प्रदान करते हैं, प्रतिभागियों को वास्तविक दुनिया की चुनौतियों को हल करने और उनके तकनीकी कौशल को उन्नत करने में मदद करते हैं।">Our workshops feature interactive sessions led by industry experts. These events provide practical experience with the latest technologies and methodologies, helping participants solve real-world challenges and advance their technical skills.</p>
+            </div>
+        </div>
+
+        <!-- Technical Meetups -->
+        <div class="training-item">
+            <img src="images/kindpng_468429.png" alt="Technical Meetups" class="training-img">
+            <div class="training-content">
+                <h3 data-english="Technical Meetups" data-hindi="तकनीकी मीटअप">Technical Meetups</h3>
+                <p data-english="We host technical meetups that foster collaboration and knowledge sharing among professionals and enthusiasts. These events offer a platform to discuss emerging technologies, network with peers, and stay updated on industry trends." data-hindi="हम तकनीकी मीटअप की मेज़बानी करते हैं जो पेशेवरों और उत्साही लोगों के बीच सहयोग और ज्ञान साझा करने को प्रोत्साहित करते हैं। ये कार्यक्रम उभरती प्रौद्योगिकियों पर चर्चा करने, साथियों के साथ नेटवर्क बनाने और उद्योग के रुझानों पर अद्यतित रहने के लिए एक मंच प्रदान करते हैं।">We host technical meetups that foster collaboration and knowledge sharing among professionals and enthusiasts. These events offer a platform to discuss emerging technologies, network with peers, and stay updated on industry trends.</p>
+            </div>
+        </div>
+
+        <!-- Functions with Tech Giants -->
+        <div class="training-item">
+            <img src="images/kindpng_2799219.png" alt="Functions with Tech Giants" class="training-img">
+            <div class="training-content">
+                <h3 data-english="Functions with Tech Giants" data-hindi="टेक दिग्गजों के साथ कार्यक्रम">Functions with Tech Giants</h3>
+                <p data-english="Our high-profile functions feature keynote speeches and panel discussions with leaders from major technology companies. These events provide valuable insights into cutting-edge technologies and strategic industry developments." data-hindi="हमारे उच्च-प्रोफाइल कार्यक्रम प्रमुख प्रौद्योगिकी कंपनियों के नेताओं के साथ मुख्य भाषण और पैनल चर्चा प्रस्तुत करते हैं। ये कार्यक्रम अत्याधुनिक प्रौद्योगिकियों और रणनीतिक उद्योग विकास पर मूल्यवान अंतर्दृष्टि प्रदान करते हैं।">Our high-profile functions feature keynote speeches and panel discussions with leaders from major technology companies. These events provide valuable insights into cutting-edge technologies and strategic industry developments.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 
         <!-- Contact Section -->
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>If you have any inquiries or need further information, feel free to reach out to us. We're here to assist
-                you!</p>
+       <!-- Contact Section -->
+<section id="contact">
+    <h2 data-english="Contact Us" data-hindi="संपर्क करें">Contact Us</h2>
+    <p data-english="If you have any inquiries or need further information, feel free to reach out to us. We're here to assist you!" data-hindi="यदि आपके कोई प्रश्न हैं या आपको और जानकारी की आवश्यकता है, तो कृपया हमसे संपर्क करें। हम आपकी सहायता के लिए यहाँ हैं!">If you have any inquiries or need further information, feel free to reach out to us. We're here to assist you!</p>
+  
+    <div class="contact-container">
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h3 data-english="Send Us a Message" data-hindi="हमें एक संदेश भेजें">Send Us a Message</h3>
+            <form id="contactForm" action="#" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" id="emailInput" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn" data-english="Send Message" data-hindi="संदेश भेजें">Send Message</button>
+                <p id="error-message" data-english="Please fill in all fields correctly." data-hindi="कृपया सभी फ़ील्ड को सही ढंग से भरें।"></p>
+            </form>
+        </div>
 
-            <div class="contact-container">
-                <!-- Contact Form -->
-                <div class="contact-form">
-                    <h3>Send Us a Message</h3>
-                    <form action="#" method="post">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <textarea name="message" placeholder="Your Message" required></textarea>
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
-                </div>
+        <!-- Contact Details -->
+        <div class="contact-details">
+            <h3 data-english="Contact Information" data-hindi="संपर्क जानकारी">Contact Information</h3>
+            <p data-english="<strong>Address:</strong> Rajasthan Police Telecommunication Branch, Jaipur, Rajasthan, India" 
+               data-hindi="<strong>पता:</strong> राजस्थान पुलिस टेलीकम्युनिकेशन शाखा, जयपुर, राजस्थान, भारत">
+                <strong>Address:</strong> Rajasthan Police Telecommunication Branch, Jaipur, Rajasthan, India
+            </p>
+            <p data-english="<strong>Phone:</strong> +91-123-456-7890" 
+               data-hindi="<strong>फोन:</strong> +91-123-456-7890">
+                <strong>Phone:</strong> +91-123-456-7890
+            </p>
+            <p data-english="<strong>Email:</strong> contact@rptb.in" 
+               data-hindi="<strong>ईमेल:</strong> contact@rptb.in">
+                <strong>Email:</strong> contact@rptb.in
+            </p>
+            <p data-english="<strong>Office Hours:</strong> Monday - Friday, 9 AM - 6 PM" 
+               data-hindi="<strong>कार्यालय समय:</strong> सोमवार - शुक्रवार, 9 AM - 6 PM">
+                <strong>Office Hours:</strong> Monday - Friday, 9 AM - 6 PM
+            </p>
 
-                <!-- Contact Details -->
-                <div class="contact-details">
-                    <h3>Contact Information</h3>
-                    <p><strong>Address:</strong> Rajasthan Police Telecommunication Branch, Jaipur, Rajasthan, India</p>
-                    <p><strong>Phone:</strong> +91-123-456-7890</p>
-                    <p><strong>Email:</strong> contact@rptb.in</p>
-                    <p><strong>Office Hours:</strong> Monday - Friday, 9 AM - 6 PM</p>
-
-                    <!-- Social Media Links -->
-                    <div class="social-media">
-                        <a href="https://facebook.com" target="_blank" class="social-icon"><img src="facebook-logo.png"
-                                alt="Facebook"></a>
-                        <a href="https://twitter.com" target="_blank" class="social-icon"><img src="twitter-logo.png"
-                                alt="Twitter"></a>
-                        <a href="https://linkedin.com" target="_blank" class="social-icon"><img src="linkedin-logo.png"
-                                alt="LinkedIn"></a>
-                    </div>
-                </div>
+            <!-- Social Media Links -->
+            <div class="social-media">
+                <a href="https://facebook.com" target="_blank" class="social-icon" aria-label="Facebook"><img src="facebook-logo.png" alt="Facebook"></a>
+                <a href="https://twitter.com" target="_blank" class="social-icon" aria-label="Twitter"><img src="twitter-logo.png" alt="Twitter"></a>
+                <a href="https://linkedin.com" target="_blank" class="social-icon" aria-label="LinkedIn"><img src="linkedin-logo.png" alt="LinkedIn"></a>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
+
 
     </main>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Rajasthan Police Telecommunication Branch</p>
+        <p data-english="&copy; 2024 Rajasthan Police Telecommunication Branch" data-hindi="&copy; 2024 राजस्थान पुलिस टेलीकम्युनिकेशन शाखा">
+            &copy; 2024 Rajasthan Police Telecommunication Branch
+        </p>
     </footer>
+    
 
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
