@@ -1,132 +1,397 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Directorate of Coordination Police Wireless</title>
 <style>
-body {
-  font-family: sans-serif;
+    /* General Styles */
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 100px auto 20px; /* Adjusted for navbar */
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    .header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .header h1 {
+        margin: 0;
+        font-size: 2.2em;
+        color: #002366;
+    }
+
+    .header p {
+        margin: 5px 0;
+        font-size: 1.1em;
+        color: #555;
+    }
+
+    /* Navbar Styles */
+    /* Navbar Styles */
+.nav-container {
+    background-color: #002366;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
+.logo-image {
+    height: 50px; /* Adjust as needed */
 }
 
-th, td {
-  text-align: left;
-  padding: 8px;
-  border: 1px solid #dddddd;
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
 
-th {
-  background-color: #54a9c3;
+.nav-links li {
+    margin-left: 20px;
 }
 
-.header {
-  text-align: center;
-  margin-bottom: 20px;
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
 }
 
-.header h1 {
-  margin: 0;
+.nav-links a:hover {
+    color: #ffb703;
 }
 
-.header p {
-  margin: 5px 0;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
 }
 
-.table-header {
-  background-color: #00bcd4;
-  color: white;
-}
+
+    /* Table Styles */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 12px;
+        border-bottom: 1px solid #ddd;
+        font-size: 1em;
+    }
+
+    th {
+        background-color: #002366;
+        color: white;
+        font-weight: bold;
+    }
+
+    .table-header {
+        background-color: #54a9c3;
+        color: white;
+    }
+
+    h2 {
+        font-size: 1.8em;
+        color: #002366;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .nav-links {
+            display: none; /* Hidden on small screens */
+            flex-direction: column;
+            width: 100%;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            background-color: #002366;
+        }
+
+        .nav-links li {
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        .menu-icon {
+            display: block;
+        }
+
+        .container {
+            margin-top: 140px; /* Adjust for fixed navbar on smaller screens */
+        }
+
+        th, td {
+            font-size: 0.9em;
+            padding: 10px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .header h1 {
+            font-size: 1.6em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        th, td {
+            font-size: 0.8em;
+        }
+    }
+
 </style>
 </head>
 <body>
-<div class="header">
-  <h1>Directorate of Coordination Police Wireless,</h1>
-  <h1>Ministry of Home Affairs</h1>
-  <p>Block No - 9, CGO Complex, New Delhi 110003</p>
+
+<!-- Navigation Bar -->
+<!-- Navigation Bar -->
+<div class="nav-container">
+  <div class="logo">
+      <a href="index.html">
+          <img src="images/Rajasthan_Police_Logo.png" alt="Telecommunication Logo" class="logo-image">
+          <!-- Path to your logo image -->
+      </a>
+  </div>
+
+  <ul class="nav-links">
+      <li><a href="index.html" class="content" data-english="Home" data-hindi="होम">Home</a></li>
+  </ul>
 </div>
 
-<table>
-  <tr class="table-header">
-    <th>Name</th>
-    <th>Designation</th>
-    <th>Room No. /Ext. No.</th>
-    <th>Office No.</th>
-    <th>Fax No.</th>
-    <th>E-mail ID</th>
-  </tr>
-  <tr>
-    <td>Vacant</td>
-    <td>Director</td>
-    <td>300</td>
-    <td>011-24361561</td>
-    <td>011-24362769</td>
-    <td>director[dot]dcpw[at]gov[dot]in</td>
-  </tr>
-  <tr>
-    <td>Smt. Shakuntala Chauhan</td>
-    <td>PS to Director</td>
-    <td>322</td>
-    <td>011-24361561</td>
-    <td>-</td>
-    <td>shakuntala[dot]dcpw[at]gov[dot]in</td>
-  </tr>
-  <tr>
-    <td>Lt. Col. Bhagwat Mukund Keshav</td>
-    <td>Additional Director (HQ)</td>
-    <td>319</td>
-    <td>011-24361768</td>
-    <td>-</td>
-    <td>addldir[dot]hq-
-dcpw[at]dcpw[dot]gov[dot]in</td>
-  </tr>
-  <tr>
-    <td>Sh. R.K. Verma</td>
-    <td>Additional Director (OPS)</td>
-    <td>303</td>
-    <td>011-24361973</td>
-    <td>011-24361344</td>
-    <td>adldir-ops[at]dcpw[dot]gov[dot]in</td>
-  </tr>
-</table>
 
-<h2>Administration</h2>
+<div class="container">
+    <div class="header">
+        <h1>Directorate of Coordination Police Wireless,</h1>
+        <h1>Ministry of Home Affairs</h1>
+        <p>Block No - 9, CGO Complex, New Delhi 110003</p>
+    </div>
 
-<table>
-  <tr class="table-header">
-    <th>Name</th>
-    <th>Designation</th>
-    <th>Room No. /Ext. No.</th>
-    <th>Office No.</th>
-    <th>Fax No.</th>
-    <th>E-mail ID</th>
-  </tr>
-  <tr>
-    <td>Sh. Naresh Kumar</td>
-    <td>Joint Director (Admn)</td>
-    <td>406</td>
-    <td>011-24362833</td>
-    <td>-</td>
-    <td>nkmal[at]dcpw[dot]gov[dot]in</td>
-  </tr>
-  <tr>
-    <td>Sh. R.K. Singh</td>
-    <td>Deputy Director (Admin & CDN)</td>
-    <td>411</td>
-    <td>011-24361589</td>
-    <td>-</td>
-    <td>rksingh[at]dcpw[dot]gov[dot]in</td>
-  </tr>
-  <tr>
-    <td>Sh. Prabhat Kumar Pandey</td>
-    <td>Joint Assistant Director (Admin)</td>
-    <td>-</td>
-    <td>-</td>
-    <td>-</td>
-    <td>prabhat[dot]pandey[at]dcpw[dot]gov[dot]in</td>
-  </tr>
-</table>
+    <table>
+        <tr class="table-header">
+            <th>Name</th>
+            <th>Designation</th>
+            <th>Room No. / Ext. No.</th>
+            <th>Office No.</th>
+            <th>Fax No.</th>
+            <th>E-mail ID</th>
+        </tr>
+        <tr>
+            <td>Vacant</td>
+            <td>Director</td>
+            <td>300</td>
+            <td>011-24361561</td>
+            <td>011-24362769</td>
+            <td>director.dcpw@gov.in</td>
+        </tr>
+        <tr>
+            <td>Smt. Shakuntala Chauhan</td>
+            <td>PS to Director</td>
+            <td>322</td>
+            <td>011-24361561</td>
+            <td>-</td>
+            <td>shakuntala.dcpw@gov.in</td>
+        </tr>
+        <tr>
+            <td>Lt. Col. Bhagwat Mukund Keshav</td>
+            <td>Additional Director (HQ)</td>
+            <td>319</td>
+            <td>011-24361768</td>
+            <td>-</td>
+            <td>addldir.hq-dcpw@gov.in</td>
+        </tr>
+        <tr>
+            <td>Sh. R.K. Verma</td>
+            <td>Additional Director (OPS)</td>
+            <td>303</td>
+            <td>011-24361973</td>
+            <td>011-24361344</td>
+            <td>adldir-ops@dcpw.gov.in</td>
+        </tr>
+    </table>
+
+    <h2>Administration</h2>
+
+    <table>
+        <tr class="table-header">
+            <th>Name</th>
+            <th>Designation</th>
+            <th>Room No. / Ext. No.</th>
+            <th>Office No.</th>
+            <th>Fax No.</th>
+            <th>E-mail ID</th>
+        </tr>
+        <tr>
+            <td>Sh. Naresh Kumar</td>
+            <td>Joint Director (Admn)</td>
+            <td>406</td>
+            <td>011-24362833</td>
+            <td>-</td>
+            <td>nkmal@dcpw.gov.in</td>
+        </tr>
+        <tr>
+            <td>Sh. R.K. Singh</td>
+            <td>Deputy Director (Admin & CDN)</td>
+            <td>411</td>
+            <td>011-24361589</td>
+            <td>-</td>
+            <td>rksingh@dcpw.gov.in</td>
+        </tr>
+        <tr>
+            <td>Smt. Sunita Verma</td>
+            <td>Assistant Director (Admin)</td>
+            <td>306</td>
+            <td>011-24361772</td>
+            <td>-</td>
+            <td>sunita@dcpw.gov.in</td>
+        </tr>
+        <tr>
+            <td>Sh. S.K. Yadav</td>
+            <td>Administrative Officer</td>
+            <td>204</td>
+            <td>011-24362767</td>
+            <td>-</td>
+            <td>skyadav@dcpw.gov.in</td>
+        </tr>
+    </table>
+
+    <h2>Finance</h2>
+
+    <table>
+        <tr class="table-header">
+            <th>Name</th>
+            <th>Designation</th>
+            <th>Room No. / Ext. No.</th>
+            <th>Office No.</th>
+            <th>Fax No.</th>
+            <th>E-mail ID</th>
+        </tr>
+        <tr>
+            <td>Sh. Anil Kumar</td>
+            <td>Joint Director (Finance)</td>
+            <td>410</td>
+            <td>011-24362839</td>
+            <td>-</td>
+            <td>anil@dcpw.gov.in</td>
+        </tr>
+        <tr>
+            <td>Smt. Radha Devi</td>
+            <td>Assistant Director (Finance)</td>
+            <td>301</td>
+            <td>011-24361591</td>
+            <td>-</td>
+            <td>radha@dcpw.gov.in</td>
+        </tr>
+        <tr>
+            <td>Sh. L.K. Pandey</td>
+            <td>Section Officer (Finance)</td>
+            <td>310</td>
+            <td>011-24361774</td>
+            <td>-</td>
+            <td>lkpandey@dcpw.gov.in</td>
+        </tr>
+        <tr>
+            <td>Sh. R. K. Malhotra</td>
+            <td>Account Officer</td>
+            <td>415</td>
+            <td>011-24362775</td>
+            <td>-</td>
+            <td>malhotra@dcpw.gov.in</td>
+        </tr>
+    </table>
+</div>
+
+<script>
+    // Toggle mobile menu visibility
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.style.display = (navLinks.style.display === 'flex') ? 'none' : 'flex';
+}
+
+// Smooth scrolling for internal links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+
+        // Hide the menu after clicking on mobile
+        if (window.innerWidth <= 768) {
+            document.querySelector('.nav-links').style.display = 'none';
+        }
+    });
+});
+
+// Language toggle functionality
+let currentLanguage = 'english';
+
+function toggleLanguage() {
+    const elements = document.querySelectorAll('.content');
+    elements.forEach(element => {
+        if (currentLanguage === 'english') {
+            element.textContent = element.getAttribute('data-hindi');
+        } else {
+            element.textContent = element.getAttribute('data-english');
+        }
+    });
+    currentLanguage = (currentLanguage === 'english') ? 'hindi' : 'english';
+}
+
+// Add click event to the language toggle button
+document.querySelector('.language-toggle').addEventListener('click', toggleLanguage);
+
+// Make the navbar sticky on scroll
+window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.nav-container');
+    if (window.pageYOffset > 0) {
+        navbar.classList.add('sticky');
+    } else {
+        navbar.classList.remove('sticky');
+    }
+});
+
+// Hamburger menu animation (CSS class toggling)
+document.querySelector('.menu-icon').addEventListener('click', () => {
+    const menuIcon = document.querySelector('.menu-icon');
+    menuIcon.classList.toggle('open'); // Add class 'open' for menu icon animation
+});
+
+</script>
+
 </body>
 </html>

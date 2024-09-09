@@ -388,43 +388,46 @@
 
 
         <!-- Contact Section -->
-       <!-- Contact Section -->
-<section id="contact">
-    <h2 data-english="Contact Us" data-hindi="संपर्क करें">Contact Us</h2>
-    <p data-english="If you have any inquiries or need further information, feel free to reach out to us. We're here to assist you!" data-hindi="यदि आपके कोई प्रश्न हैं या आपको और जानकारी की आवश्यकता है, तो कृपया हमसे संपर्क करें। हम आपकी सहायता के लिए यहाँ हैं!">If you have any inquiries or need further information, feel free to reach out to us. We're here to assist you!</p>
-  
-    <div class="contact-container">
-        <!-- Contact Form -->
-        <div class="contact-form">
-            <h3 data-english="Send Us a Message" data-hindi="हमें एक संदेश भेजें">Send Us a Message</h3>
-            <form id="contactForm" action="#" method="post">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" id="emailInput" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn" data-english="Send Message" data-hindi="संदेश भेजें">Send Message</button>
-                <p id="error-message" data-english="Please fill in all fields correctly." data-hindi="कृपया सभी फ़ील्ड को सही ढंग से भरें।" style="display: none;"></p>
-            </form>
-            
-            
-        </div>
-
-        <!-- Contact Details -->
-        <div class="contact-details">
-            <h3>Contact Information</h3>
-            <p><strong>Address:</strong> Rajasthan Police Telecommunication Branch, Jaipur, Rajasthan, India</p>
-            <p><strong>Phone:</strong> +91-123-456-7890</p>
-            <p><strong>Email:</strong> contact@rptb.in</p>
-            <p><strong>Office Hours:</strong> Monday - Friday, 9 AM - 6 PM</p>
-
-            <!-- Social Media Links -->
-            <div class="social-media">
-                <a href="https://facebook.com" target="_blank" class="social-icon" aria-label="Facebook"><img src="images/facebook.png" alt="Facebook"></a>
-                <a href="https://twitter.com" target="_blank" class="social-icon" aria-label="Twitter"><img src="images/twitter.png" alt="Twitter"></a>
-                <a href="https://linkedin.com" target="_blank" class="social-icon" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn"></a>
+        <section id="contact">
+            <h2 data-english="Contact Us" data-hindi="संपर्क करें">Contact Us</h2>
+            <p data-english="If you have any inquiries or need further information, feel free to reach out to us. We're here to assist you!" data-hindi="यदि आपके कोई प्रश्न हैं या आपको और जानकारी की आवश्यकता है, तो कृपया हमसे संपर्क करें। हम आपकी सहायता के लिए यहाँ हैं!">If you have any inquiries or need further information, feel free to reach out to us. We're here to assist you!</p>
+          
+            <div class="contact-container">
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <h3 data-english="Send Us a Message" data-hindi="हमें एक संदेश भेजें">Send Us a Message</h3>
+                    <form id="contactForm" action="process.php" method="post">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" id="emailInput" name="email" placeholder="Your Email" required>
+                        <textarea name="message" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn" data-english="Send Message" data-hindi="संदेश भेजें">Send Message</button>
+                        <p id="error-message" data-english="Please fill in all fields correctly." data-hindi="कृपया सभी फ़ील्ड को सही ढंग से भरें।" style="display: none;"></p>
+                    </form>
+                </div>
+        
+                <!-- Contact Details -->
+                <div class="contact-details">
+                    <h3>Contact Information</h3>
+                    <p><strong>Address:</strong> Rajasthan Police Telecommunication Branch, Jaipur, Rajasthan, India</p>
+                    <p><strong>Phone:</strong> +91-123-456-7890</p>
+                    <p><strong>Email:</strong> contact@rptb.in</p>
+                    <p><strong>Office Hours:</strong> Monday - Friday, 9 AM - 6 PM</p>
+        
+                    <!-- Social Media Links -->
+                    <div class="social-media">
+                        <a href="https://facebook.com" target="_blank" class="social-icon" aria-label="Facebook"><img src="images/facebook.png" alt="Facebook"></a>
+                        <a href="https://twitter.com" target="_blank" class="social-icon" aria-label="Twitter"><img src="images/twitter.png" alt="Twitter"></a>
+                        <a href="https://linkedin.com" target="_blank" class="social-icon" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
+        
+            <!-- Contact More Button -->
+            <div class="contact-more">
+               <a href="conact.html"> <button class="btn contact-more-btn" data-english="Contact More" data-hindi="अधिक संपर्क करें">Contact More</button></a>
+            </div>
+        </section>
+        
 
 
     </main>

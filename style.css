@@ -787,7 +787,6 @@ section p {
    }
 }
 
-
 /* Contact Section Styles */
 #contact {
    padding: 60px 20px;
@@ -896,6 +895,28 @@ section p {
    opacity: 0.8;
 }
 
+/* Contact More Button Styles */
+.contact-more {
+   text-align: center;
+   margin-top: 30px;
+}
+
+.contact-more-btn {
+   background-color: #002366;
+   color: white;
+   padding: 12px 24px;
+   font-size: 1.2em;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s;
+}
+
+.contact-more-btn:hover {
+   background-color: #ffb703;
+   color: #333;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
    #contact h2 {
@@ -930,6 +951,11 @@ section p {
 
    .contact-details p {
       font-size: 1em;
+   }
+
+   .contact-more-btn {
+      font-size: 1em;
+      padding: 10px 20px;
    }
 }
 
