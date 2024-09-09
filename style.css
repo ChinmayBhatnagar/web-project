@@ -1125,3 +1125,14 @@ section p {
 #error-message {
    color: red; /* Set error text color to red */
 }
+
+
+.menu-icon {
+   display: none;
+   font-size: 1.8em;
+   cursor: pointer;
+}
+
+.menu-icon {
+   display: block;
+}

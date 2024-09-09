@@ -113,3 +113,8 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 
     xhr.send(formData); // Send the form data to the server
 });
+// Hamburger menu animation (CSS class toggling)
+document.querySelector('.menu-icon').addEventListener('click', () => {
+    const menuIcon = document.querySelector('.menu-icon');
+    menuIcon.classList.toggle('open'); // Add class 'open' for menu icon animation
+});

@@ -5,8 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Directorate of Coordination Police Wireless</title>
 <link rel="stylesheet" href="styles1.css">
-</head>
-<body>
 <!-- <style>
     /* General Styles */
     body {
@@ -46,54 +44,52 @@
     }
 
     /* Navbar Styles */
-    /* Navbar Styles */
-.nav-container {
-    background-color: #002366;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-}
-
-.logo-image {
-    height: 50px; /* Adjust as needed */
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-links li {
-    margin-left: 20px;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.1em;
-    font-weight: bold;
-}
-
-.nav-links a:hover {
-    color: #ffb703;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .nav-links {
-        flex-direction: column;
+    .nav-container {
+        background-color: #002366;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
         align-items: center;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-container .logo img {
+        height: 50px;
+    }
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
     }
 
     .nav-links li {
-        margin: 10px 0;
+        margin-left: 20px;
     }
-}
 
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.1em;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+        color: #ffb703;
+    }
+
+    .menu-icon {
+        display: none; /* Hidden by default */
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+    }
 
     /* Table Styles */
     table {
@@ -175,7 +171,6 @@
             font-size: 0.8em;
         }
     }
-
 </style> -->
 </head>
 <body>
@@ -183,17 +178,16 @@
 <!-- Navigation Bar -->
 <div class="nav-container">
   <div class="logo">
-      <a href="index.html">
+      <a href="#home">
           <img src="images/Rajasthan_Police_Logo.png" alt="Telecommunication Logo" class="logo-image">
           <!-- Path to your logo image -->
       </a>
   </div>
-  <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+
   <ul class="nav-links">
-      <li><a href="index.html" class="content" data-english="Home" data-hindi="होम">Home</a></li>
+      <li><a href="#home" class="content" data-english="Home" data-hindi="होम">Home</a></li>
   </ul>
 </div>
-
 
 <div class="container">
     <div class="header">
@@ -340,7 +334,7 @@
     // Toggle mobile menu visibility
 function toggleMenu() {
     const navLinks = document.querySelector('.nav-links');
-    navLinks.style.display = (navLinks.style.display === 'flex') ? 'none' : 'flex';
+    navLinks.classList.toggle('active');
 }
 
 // Smooth scrolling for internal links
@@ -354,7 +348,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
         // Hide the menu after clicking on mobile
         if (window.innerWidth <= 768) {
-            document.querySelector('.nav-links').style.display = 'none';
+            document.querySelector('.nav-links').classList.remove('active');
         }
     });
 });
@@ -375,7 +369,7 @@ function toggleLanguage() {
 }
 
 // Add click event to the language toggle button
-document.querySelector('.language-toggle').addEventListener('click', toggleLanguage);
+document.querySelector('.language-toggle')?.addEventListener('click', toggleLanguage);
 
 // Make the navbar sticky on scroll
 window.addEventListener('scroll', () => {
@@ -385,12 +379,6 @@ window.addEventListener('scroll', () => {
     } else {
         navbar.classList.remove('sticky');
     }
-});
-
-// Hamburger menu animation (CSS class toggling)
-document.querySelector('.menu-icon').addEventListener('click', () => {
-    const menuIcon = document.querySelector('.menu-icon');
-    menuIcon.classList.toggle('open'); // Add class 'open' for menu icon animation
 });
 
 </script>
