@@ -11,10 +11,10 @@ const swiper = new Swiper('.swiper-container', {
     },
     autoplay: {
         delay: 4000,
-        disableOnInteraction: false, // Autoplay will not be disabled after user interactions
+        disableOnInteraction: false,
     },
-    speed: 600, // Speed of transitions
-    effect: 'fade', // Adds a fade effect between slides
+    speed: 600,
+    effect: 'fade',
 });
 
 // Function to open a modal
@@ -22,7 +22,7 @@ function openModal(modalId) {
     const modal = document.getElementById(modalId);
     if (modal) {
         modal.style.display = 'block';
-        document.body.style.overflow = 'hidden'; // Prevent background scroll
+        document.body.style.overflow = 'hidden';
     }
 }
 
@@ -31,14 +31,14 @@ function closeModal(modalId) {
     const modal = document.getElementById(modalId);
     if (modal) {
         modal.style.display = 'none';
-        document.body.style.overflow = ''; // Restore background scroll
+        document.body.style.overflow = '';
     }
 }
 
 // Close the modal when clicking outside of it
 window.addEventListener('click', (event) => {
     if (event.target.classList.contains('modal')) {
-        closeModal(event.target.id); // Reuse closeModal function
+        closeModal(event.target.id);
     }
 });
 
@@ -68,7 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Toggle button text
         languageToggle.textContent = language === 'english' ? 'हिंदी' : 'English';
     }
 
@@ -77,6 +76,40 @@ document.addEventListener('DOMContentLoaded', () => {
         setLanguage(currentLanguage);
     });
 
-    // Optionally set default language
-    setLanguage('english'); // Default language
+    setLanguage('english');
+});
+
+// Form Submission Functionality
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    var formData = new FormData(this); // Get form data
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'process.php', true); // Ensure 'process.php' path is correct
+
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            const response = xhr.responseText.trim();
+            const messageElement = document.getElementById('error-message');
+            
+            if (response === 'success') {
+                messageElement.innerText = 'Successfully updated';
+                messageElement.style.color = 'green'; // Set success message color to green
+            } else {
+                messageElement.innerText = 'An error occurred. Please try again.';
+                messageElement.style.color = 'red'; // Set error message color to red
+            }
+            
+            messageElement.style.display = 'block';
+        } else {
+            console.error('Server error:', xhr.statusText);
+        }
+    };
+
+    xhr.onerror = function() {
+        console.error('Request error');
+    };
+
+    xhr.send(formData); // Send the form data to the server
 });

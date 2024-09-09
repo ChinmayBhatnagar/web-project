@@ -111,13 +111,13 @@ nav ul li a:hover, .language-toggle:hover {
    font-weight: bold;
 }
 
-/* 
+
 .logo a {
    color: white;
    text-decoration: none;
    font-size: 1.5em;
    font-weight: bold;
-} */
+}
 
 .menu-icon {
    display: none;
@@ -1051,6 +1051,7 @@ section p {
    }
 }
 /* Default styles for the language toggle button */
+/* Default styles for the language toggle button */
 .language-toggle {
    background-color: #ffb703;
    color: #333;
@@ -1060,6 +1061,10 @@ section p {
    cursor: pointer;
    border-radius: 5px;
    transition: background-color 0.3s, color 0.3s;
+   position: fixed; /* Fixed positioning to keep it visible */
+   top: 15px; /* Adjust the top position */
+   right: 15px; /* Adjust the right position */
+   z-index: 1000; /* Ensure it stays on top of other elements */
 }
 
 /* Hover effect */
@@ -1073,8 +1078,14 @@ section p {
    .language-toggle {
        padding: 8px 16px; /* Slightly smaller padding for mobile */
        font-size: 0.9em; /* Slightly smaller font size for better fit */
-       width: 100%; /* Full width on smaller screens */
-       margin: 10px 0; /* Margin around the button for spacing */
-       text-align: center; /* Center text on smaller screens */
+       width: auto; /* Keep the width auto for a natural button size */
+       margin: 0; /* Remove margin to fit well on screen */
    }
+}
+#success-message {
+   color: green; /* Set text color to green */
+   display: none; /* Initially hidden */
+}
+#error-message {
+   color: red; /* Set error text color to red */
 }
