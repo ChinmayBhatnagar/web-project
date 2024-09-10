@@ -42,10 +42,11 @@ window.addEventListener('click', (event) => {
     }
 });
 
-// Close modal with the "Escape" key
+// Optionally close the modal using the "Escape" key
 window.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
-        document.querySelectorAll('.modal[style*="display: block"]').forEach((modal) => {
+        const openModals = document.querySelectorAll('.modal[style*="display: block"]');
+        openModals.forEach((modal) => {
             closeModal(modal.id);
         });
     }
@@ -59,9 +60,12 @@ document.addEventListener('DOMContentLoaded', () => {
     );
 
     function setLanguage(language) {
-        contentElements.forEach((element) => {
-            const dataAttr = language === 'english' ? 'data-english' : 'data-hindi';
-            element.textContent = element.getAttribute(dataAttr) || element.textContent;
+        contentElements.forEach(element => {
+            if (language === 'english') {
+                element.textContent = element.getAttribute('data-english') || element.textContent;
+            } else if (language === 'hindi') {
+                element.textContent = element.getAttribute('data-hindi') || element.textContent;
+            }
         });
 
         languageToggle.textContent = language === 'english' ? 'हिंदी' : 'English';
@@ -77,30 +81,49 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Form Submission Functionality
 document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent default form submission
+    event.preventDefault(); // Prevent the default form submission
 
-    const formData = new FormData(this); // Get form data
+    var formData = new FormData(this); // Get form data
 
-    fetch('process.php', {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => response.text())
-    .then(text => {
-        const messageElement = document.getElementById('error-message');
-        if (text.trim() === 'success') {
-            messageElement.innerText = 'Successfully updated';
-            messageElement.style.color = 'green'; // Success message color
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'process.php', true); // Ensure 'process.php' path is correct
+
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            const response = xhr.responseText.trim();
+            const messageElement = document.getElementById('error-message');
+            
+            if (response === 'success') {
+                messageElement.innerText = 'Successfully updated';
+                messageElement.style.color = 'green'; // Set success message color to green
+            } else {
+                messageElement.innerText = 'An error occurred. Please try again.';
+                messageElement.style.color = 'red'; // Set error message color to red
+            }
+            
+            messageElement.style.display = 'block';
         } else {
-            messageElement.innerText = 'An error occurred. Please try again.';
-            messageElement.style.color = 'red'; // Error message color
+            console.error('Server error:', xhr.statusText);
         }
-        messageElement.style.display = 'block';
-    })
-    .catch(error => console.error('Request error:', error));
+    };
+
+    xhr.onerror = function() {
+        console.error('Request error');
+    };
+
+    xhr.send(formData); // Send the form data to the server
 });
 
-// Mobile Menu Toggle
+// Toggle the mobile menu
 document.querySelector('.menu-icon').addEventListener('click', () => {
-    document.querySelector('.nav-links').classList.toggle('show'); // Toggle 'show' class for menu
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('show'); // Toggle 'show' class for menu
+});
+
+// Close the mobile menu when a nav link is clicked
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.remove('show'); // Remove 'show' class to close menu
+    });
 });
