@@ -32,11 +32,12 @@ a:hover {
     --container: 1160px;
     max-width: var(--container);
     margin: auto;
+    padding: 0 15px; /* Add padding for smaller screens */
 }
 
 .teamGrid {
     display: grid;
-    grid-template-columns: 32.33% 32.33% 32.33%;
+    grid-template-columns: repeat(3, 1fr); /* Use repeat for dynamic grid columns */
     column-gap: 1.5%;
     margin-top: 100px;
 }
@@ -55,8 +56,8 @@ a:hover {
 
 .avatar > img {
     width: 150px;
-    height: 150px; /* Ensures the height matches the width */
-    object-fit: cover; /* Ensures the image covers the entire area without distortion */
+    height: 150px;
+    object-fit: cover;
     margin: auto;
     border-radius: 50%;
     border: 1px solid rgb(170, 170, 173);
@@ -139,4 +140,34 @@ a:hover {
     background: #f4f5f7;
     border-radius: 50%;
     margin: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .teamGrid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .teamGrid {
+        grid-template-columns: 1fr; /* Single column for mobile devices */
+        row-gap: 30px; /* Adds space between rows */
+    }
+
+    .avatar > img {
+        width: 120px;
+        height: 120px; /* Adjust image size for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    p {
+        font-size: 16px; /* Smaller font size for mobile devices */
+        line-height: 22px;
+    }
+
+    .container {
+        padding: 0 10px; /* Reduce padding for extra small screens */
+    }
 }
