@@ -1,4 +1,4 @@
-// Initialize Swiper
+// Initialize Swiper with updated settings
 const swiper = new Swiper('.swiper-container', {
     loop: true,
     pagination: {
@@ -15,38 +15,49 @@ const swiper = new Swiper('.swiper-container', {
     },
     speed: 600,
     effect: 'fade',
+    fadeEffect: {
+        crossFade: true,
+    },
+    responsive: {
+        640: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+        },
+        1024: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+        },
+    }
 });
 
-// Function to open a modal
+// Modal functionality with enhancements
 function openModal(modalId) {
     const modal = document.getElementById(modalId);
     if (modal) {
         modal.style.display = 'block';
-        document.body.style.overflow = 'hidden';
+        document.body.style.overflow = 'hidden'; // Disable body scroll when modal is open
     }
 }
 
-// Function to close a modal
 function closeModal(modalId) {
     const modal = document.getElementById(modalId);
     if (modal) {
         modal.style.display = 'none';
-        document.body.style.overflow = '';
+        document.body.style.overflow = ''; // Re-enable body scroll
     }
 }
 
-// Close the modal when clicking outside of it
+// Close modal when clicking outside of it
 window.addEventListener('click', (event) => {
     if (event.target.classList.contains('modal')) {
         closeModal(event.target.id);
     }
 });
 
-// Optionally close the modal using the "Escape" key
+// Close modal on Escape key press
 window.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
-        const openModals = document.querySelectorAll('.modal[style*="display: block"]');
-        openModals.forEach((modal) => {
+        document.querySelectorAll('.modal[style*="display: block"]').forEach((modal) => {
             closeModal(modal.id);
         });
     }
@@ -56,16 +67,14 @@ window.addEventListener('keydown', (event) => {
 document.addEventListener('DOMContentLoaded', () => {
     const languageToggle = document.getElementById('languageToggle');
     const contentElements = document.querySelectorAll(
-        '.content, .hero h1, .hero p, .hero a, .about-section h2, .about-section p, .about-section h3, .about-section .objective h4, .about-section .objective p, .officer-card h3, .officer-card p, .pdf-icons span, #Branches h2, #Branches .branch-title, #Branches .sub-branch, #Branches .description, #services h2, #services p, #services .service-card h3, #services .service-card p, #projects h2, #projects .projects-section h3, #projects .project-card h4, #projects .project-card p, #training h2, #training p, #training .training-item h3, #training .training-item p, #contact h2, #contact p, #contact .contact-form h3, #contact .contact-details h3, #contact .contact-details p, #contact .btn, #contact #error-message, footer'
+        '.content, .hero h1, .hero p, .hero a, .about-section h2, .about-section p, .about-section h3, .about-section .objective h4, .about-section .objective p, .officer-card h3, .officer-card p, .pdf-icons span, #Branches h2, #Branches .branch-title, #Branches .sub-branch, #Branches .description, #services h2, #services p, #services .service-card h3, #services .service-card p, #projects h2, #projects .projects-section h3, #projects .project-card h4, #projects .project-card p, #training h2, #training p, #training .training-item h3, #training .training-item p, #contact h2, #contact p, #contact .contact-form h3, #contact .contact-details h3, #contact .contact-details p, #contact .btn, #contact #error-message, footer, .news-strip marquee, .news-strip .news-button' // Added .news-strip marquee and .news-button
     );
 
     function setLanguage(language) {
         contentElements.forEach(element => {
-            if (language === 'english') {
-                element.textContent = element.getAttribute('data-english') || element.textContent;
-            } else if (language === 'hindi') {
-                element.textContent = element.getAttribute('data-hindi') || element.textContent;
-            }
+            const englishText = element.getAttribute('data-english');
+            const hindiText = element.getAttribute('data-hindi');
+            element.textContent = language === 'english' ? englishText : hindiText;
         });
 
         languageToggle.textContent = language === 'english' ? 'हिंदी' : 'English';
@@ -76,54 +85,51 @@ document.addEventListener('DOMContentLoaded', () => {
         setLanguage(currentLanguage);
     });
 
-    setLanguage('english');
+    setLanguage('english'); // Set default language
 });
 
-// Form Submission Functionality
+// Form Submission with improved error handling
 document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission
+    event.preventDefault();
 
-    var formData = new FormData(this); // Get form data
-
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'process.php', true); // Ensure 'process.php' path is correct
+    const formData = new FormData(this);
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', 'process.php', true);
 
     xhr.onload = function() {
+        const messageElement = document.getElementById('error-message');
         if (xhr.status === 200) {
             const response = xhr.responseText.trim();
-            const messageElement = document.getElementById('error-message');
-            
             if (response === 'success') {
-                messageElement.innerText = 'Successfully updated';
-                messageElement.style.color = 'green'; // Set success message color to green
+                messageElement.textContent = 'Successfully updated';
+                messageElement.style.color = 'green';
             } else {
-                messageElement.innerText = 'An error occurred. Please try again.';
-                messageElement.style.color = 'red'; // Set error message color to red
+                messageElement.textContent = 'An error occurred. Please try again.';
+                messageElement.style.color = 'red';
             }
-            
-            messageElement.style.display = 'block';
         } else {
-            console.error('Server error:', xhr.statusText);
+            messageElement.textContent = 'Server error. Please try again later.';
+            messageElement.style.color = 'red';
         }
+        messageElement.style.display = 'block';
     };
 
     xhr.onerror = function() {
-        console.error('Request error');
+        document.getElementById('error-message').textContent = 'Request error';
     };
 
-    xhr.send(formData); // Send the form data to the server
+    xhr.send(formData);
 });
 
-// Toggle the mobile menu
+// Toggle mobile menu visibility
 document.querySelector('.menu-icon').addEventListener('click', () => {
     const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('show'); // Toggle 'show' class for menu
+    navLinks.classList.toggle('show');
 });
 
-// Close the mobile menu when a nav link is clicked
+// Close mobile menu when clicking a navigation link
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
-        const navLinks = document.querySelector('.nav-links');
-        navLinks.classList.remove('show'); // Remove 'show' class to close menu
+        document.querySelector('.nav-links').classList.remove('show');
     });
 });
